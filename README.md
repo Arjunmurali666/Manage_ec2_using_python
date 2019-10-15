@@ -18,7 +18,7 @@ def startInstance():
     print("Starting the instance...")
 
     try:
-        response = ec2.stop_instances(InstanceIds=[ec2_id], DryRun=False)
+        response = ec2.start_instances(InstanceIds=[ec2_id], DryRun=False)
         print(response)
     except:
         print("Instance start failed")
